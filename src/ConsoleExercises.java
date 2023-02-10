@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args){
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %.2f\n", pi);
+        String message = String.valueOf(System.out.format("The value of pi is approximately %.2f\n", pi));
+        System.out.println(message);
+        // System.out.printf("The value of pi is approximately %.2f\n", pi);
 
         // System.out.println("Enter an integer: ");
         Scanner sc = new Scanner(System.in);
@@ -18,6 +20,8 @@ public class ConsoleExercises {
         // System.out.println(First);
         // System.out.println(Second);
         // System.out.println(Third);
+        //The bellow method is printing all in one print method
+        // System.out.printf("%s%n%s%n%s", First, Second, Third);
 
         // System.out.println("Enter a sentnece: ");
         // String input = sc.nextLine();
