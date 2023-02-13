@@ -14,7 +14,7 @@ public class Bob{
             System.out.println("Whoa, chill out!");
         }else if(userInput.isEmpty() == true){
             System.out.println("Fine. Be that way!");
-        }else if(userInput == "bye"){
+        }else if(userInput.equals("bye")){
             stop = false;
         }else{
             System.out.println("Whatever.");
