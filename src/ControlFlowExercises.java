@@ -62,35 +62,43 @@ public class ControlFlowExercises {
         // }
 
         //(9)
-         Scanner sc = new Scanner(System.in);
-        System.out.print("What number would you like to go to: ");
-        int input = sc.nextInt();
-        System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for(int a = 1; a <= input; a++){
-            int theNumber = a;
-            int square = (int) Math.pow(a, 2);
-            int cube = (int)Math.pow(a, 3);
-            System.out.printf("%-5d  | %-5d   | %-5d \n", theNumber, square, cube);
-        }
-
-        //(10)
-        // System.out.print("Eneter a grade betwen 0 - 100: ");
-        // int grade = sc.nextInt();
-        // if(grade >= 88 && grade <= 100){
-        //     System.out.println("A");
-        // }else if( grade >= 80 && grade <= 87){
-        //     System.out.println("B");
-        // }else if(grade >= 67 && grade <= 79){
-        //     System.out.println("C");
-        // }else if(grade >= 60 && grade <= 66){
-        //     System.out.println("D");
-        // }else{
-        //     System.out.println("F");
+        Scanner sc = new Scanner(System.in);
+        // System.out.print("What number would you like to go to: ");
+        // int input = sc.nextInt();
+        // System.out.println("Here is your table!");
+        // System.out.println("number | squared | cubed");
+        // System.out.println("------ | ------- | -----");
+        // for(int a = 1; a <= input; a++){
+        //     int theNumber = a;
+        //     int square = (int) Math.pow(a, 2);
+        //     int cube = (int)Math.pow(a, 3);
+        //     System.out.printf("%-5d  | %-5d   | %-5d \n", theNumber, square, cube);
         // }
 
+        //(10)
+    boolean goOn = true;
+    do{
+        System.out.print("Eneter a grade betwen 0 - 100: ");
+        int grade = sc.nextInt();
+        if(grade >= 88){
+            System.out.println("A");
+        }else if( grade >= 80){
+            System.out.println("B");
+        }else if(grade >= 67){
+            System.out.println("C");
+        }else if(grade >= 60){
+            System.out.println("D");
+        }else{
+            System.out.println("F");
+        }
 
+        System.out.println("Do you wish to continue? ");
+        String userInput = sc.next();
+        if(!userInput.equalsIgnoreCase("y")){
+            goOn = false;
+        }
+    }while(goOn);
+        
 
     }
 }
