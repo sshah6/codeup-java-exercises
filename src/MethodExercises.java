@@ -1,4 +1,7 @@
+import java.util.Random;
 import java.util.Scanner;
+
+import javax.sound.sampled.SourceDataLine;
 
 public class MethodExercises {
     // public static int Add(int input1, int input2){
@@ -38,32 +41,76 @@ public class MethodExercises {
     //     return input1 + recursiveTimes(input1, input2 - 1);
     // }
 
-    // public static int getInteger(int min, int max){
-
-    // }
-
+    
            // TODO: create a method, sayName, that can take in a single name String input or two name String inputs and will return
         //  a greeting message to the user by either their first or first and last name.
 
         // example: sayName("Justin") - "Hi Justin"
         // example: sayName("Justin", "Reich") - "Hi Justin Reich"
 
-        public static String sayHi(String name){
-            return "Hello " + name;
-        }
-        public static String sayHi(String greeting, String name){
-            return greeting + name;
-        }
+        // public static String sayHi(String name){
+        //     return "Hello " + name;
+        // }
+        // public static String sayHi(String greeting, String name){
+        //     return greeting + name;
+        // }
 
         // TODO: overload the math exercises from the curriculum exercise to work with both integers and doubles
 
-        public static int add(int num1, int num2) {
-            return num1 + num2;
+        // public static int add(int num1, int num2) {
+        //     return num1 + num2;
+        // }
+
+        // public static double add(double num1, double num2){
+        //     return num1 + num2;
+        // }
+
+
+//(2) Resursion 
+        public static int getInteger(int min, int max){
+            System.out.println("Enter an integer between 1 - 10: ");
+            Scanner sc = new Scanner(System.in);
+            int userInput = sc.nextInt();
+
+            if(userInput > max || userInput < min ){
+                return getInteger(min, max);
+            }
+        return userInput;
         }
 
-        public static double add(double num1, double num2){
-            return num1 + num2;
+
+//FACTORIAL IN RECUSRSION
+        public static long factorial(int input){
+           if(input == 0){
+                return 1;  
+           }else{
+                return input *= factorial(input - 1);
+           }        
         }
+//(3)
+//#### FACTORIAL start#####
+        // public static void factorial(int input){
+        //     long result = 1;
+        //     if (input < 1 || input > 10){
+        //         System.out.println("number out of range!");
+        //         return;
+        //     }else{
+        //         for(int i = 1; i <= input; i++){
+        //             result *= i;       
+        //         }    
+        //     }
+        //     System.out.printf("factorial of %d is %d.\n", input, result);     
+        // }
+//####    FACTORIAL finish    #####
+
+//(4) ### DICE ROLL ######
+        // public static void diceRoll(int sideNum1, int sideNum2){
+        //     Random random = new Random();
+        //     int firstNum = random.nextInt(sideNum1) + 1;
+        //     int secondNum = random.nextInt(sideNum2) + 1;
+        //     System.out.println("first dice: " + firstNum + " second dice: " + secondNum);
+        // }
+
 
 
     public static void main(String[] args) {
@@ -74,16 +121,40 @@ public class MethodExercises {
         // System.out.println(Remainder(10, 3));
         // System.out.println(Multiply(10, 3));
         // System.out.println(recursiveTimes(3, 3));
-        System.out.println(sayHi("Alex"));
-        System.out.println(sayHi("whats up? ", "Alex"));
-        System.out.println(add(1, 3));
-        System.out.println(add(1.0, 3.5));
+        // System.out.println(sayHi("Alex"));
+        // System.out.println(sayHi("whats up? ", "Alex"));
+        // System.out.println(add(1, 3));
+        // System.out.println(add(1.0, 3.5));
 
-        // Scanner sc = new Scanner(System.in);
-        // System.out.println("Enter an integer between 1 - 10");
-        // int input1 = sc.nextInt();
+       Scanner sc = new Scanner(System.in);
 
-        // if()
-        
+//(2)
+//        System.out.println(getInteger(1, 10)); 
+        System.out.println(factorial(getInteger(1, 10)));
+
+       // =========> DICE ROLL below
+    //    System.out.println("Eneter the number of your desired dice sides: ");
+    //    int diceOne = sc.nextInt();
+    //     int diceTwo = sc.nextInt();
+    //     diceRoll(diceOne, diceTwo);
+
+    //#### FACTORIAL start#####
+    // System.out.println("Please, enter a number between 1 and 10: ");
+    // int input = sc.nextInt();
+    // factorial(input);
+    // boolean goOn = true;
+    // do{
+    //     System.out.println("Do you wish to continue: y/n");
+    //     String permission = sc.next(); 
+    //     if(permission.equals("y")){
+    //         System.out.println("Please, enter a number between 1 and 10: ");
+    //         int input2 = sc.nextInt();
+    //         factorial(input2);
+    //     }else{
+    //         goOn = false;
+    //     }
+    // }while(goOn);
+    //####### FACTORIAL finish ##########
+  
     }    
 }
