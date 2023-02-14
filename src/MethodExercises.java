@@ -4,6 +4,7 @@ import java.util.Scanner;
 import javax.sound.sampled.SourceDataLine;
 
 public class MethodExercises {
+//(1)
     // public static int Add(int input1, int input2){
     //     return input1 + input2;
     // }
@@ -67,26 +68,27 @@ public class MethodExercises {
 
 
 //(2) Resursion 
-        public static int getInteger(int min, int max){
-            System.out.println("Enter an integer between 1 - 10: ");
-            Scanner sc = new Scanner(System.in);
-            int userInput = sc.nextInt();
+        // public static int getInteger(int min, int max){
+        //     System.out.println("Enter an integer between 1 and 10: ");
+        //     Scanner sc = new Scanner(System.in);
+        //     int userInput = sc.nextInt();
 
-            if(userInput > max || userInput < min ){
-                return getInteger(min, max);
-            }
-        return userInput;
-        }
+        //     if(userInput > max || userInput < min ){
+        //         return getInteger(min, max);    //as long as the condition is met, the recursion is happening (by calling the method over and over)
+        //     }
+        // return userInput;
+        // }
 
 
 //FACTORIAL IN RECUSRSION
-        public static long factorial(int input){
-           if(input == 0){
-                return 1;  
-           }else{
-                return input *= factorial(input - 1);
-           }        
-        }
+        // public static long factorial(int input){
+        //    if(input == 0){ // when it hit zero, it returns 1, if return zero, 
+        //         //zero will be timed to result and make eveything zero
+        //         return 1;  
+        //    }else{
+        //         return input *= factorial(input - 1);
+        //    }        
+        // }
 //(3)
 //#### FACTORIAL start#####
         // public static void factorial(int input){
@@ -130,7 +132,7 @@ public class MethodExercises {
 
 //(2)
 //        System.out.println(getInteger(1, 10)); 
-        System.out.println(factorial(getInteger(1, 10)));
+        // System.out.println(factorial(getInteger(1, 10)));
 
        // =========> DICE ROLL below
     //    System.out.println("Eneter the number of your desired dice sides: ");
