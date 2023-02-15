@@ -15,22 +15,22 @@ public class DishTools {
 public final static int AverageCost = 1300;
 
 public static void shoutDishName(Dish dish){
-    System.out.printf("Name of Dish: %S\n", dish.nameOfDish);
+    System.out.printf("Name of Dish: %S\n", dish.getName());
 }
 
 public static void analyzeDishCost(Dish dish){
-    if(dish.costInCents > AverageCost){
-        System.out.printf("Expensive then everage: %s\n",dish.nameOfDish);
+    if(dish.getCost() > AverageCost){
+        System.out.printf("Expensive then everage: %s\n",dish.getName());
     }else{
-        System.out.printf("Less expensive: %s\n", dish.nameOfDish);
+        System.out.printf("Less expensive: %s\n", dish.getName());
     }
 }
 
 public static void flipRecommendation(Dish dish){
-    if(dish.wouldRecommend == false){
-        System.out.printf("Recommended\n");
+    if(dish.getRecom() == false){
+        System.out.printf("Recommended\n ======== \n");
     }else{
-        System.out.printf("Not Recommended\n");
+        System.out.printf("Not Recommended\n ======== \n");
         }
     }
 }
