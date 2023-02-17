@@ -1,9 +1,10 @@
 import java.util.Random;
 
 public class ServerNameGenerator {
+    //Its package private if there is no privacy declare
     static String[] adjectives = {"aback","abaft","abandoned","abashed","aberrant","abhorrent","abiding","abject","ablaze","able"};
-    static String[] nouns = {"accelerator", "accordion", "account", "accountant", "acknowledgment", "acoustic", "acrylic", "act", "action", "active"};
 
+    static String[] nouns = {"accelerator", "accordion", "account", "accountant", "acknowledgment", "acoustic", "acrylic", "act", "action", "active"};
 
     public static String randomAdj(String[] arr){
         Random random = new Random();
@@ -22,8 +23,6 @@ public class ServerNameGenerator {
     }
 
     public static void main(String[] args) {
-//        System.out.println(randomAdj(adjectives));
-//        System.out.println(randomNouns(nouns));
         System.out.println("Here is your server name: \n" + addAdjAndNoun(randomAdj(adjectives), randomNouns(nouns)));
     }
 }

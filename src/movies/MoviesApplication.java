@@ -17,6 +17,7 @@ public class MoviesApplication {
         System.out.println("Enter your choice: ");
 
         String userInput = sc.nextLine();
+
         for(int i = 0; i < MoviesArray.findAll().length; i++){
             if(userInput.equalsIgnoreCase("1")){
                 System.out.println(MoviesArray.findAll()[i].getName() + " " + MoviesArray.findAll()[i].getCategory());
