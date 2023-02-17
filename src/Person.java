@@ -1,4 +1,5 @@
 public class Person {
+//    public boolean persons;
     private String name;
 
     public Person(String name) {

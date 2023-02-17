@@ -8,13 +8,13 @@ public class Circle {
         this.radius = theRadius;
     }
 
-
     public double getArea(){
         double area = PI * (radius * radius);
         return area;
     }
-     public double getCircumference(){
+
+    public double getCircumference(){
         double circufrence = 2 * PI * radius;
         return circufrence;
-     }
+    }
 }
