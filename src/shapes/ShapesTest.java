@@ -14,15 +14,19 @@ public class ShapesTest {
 
         //###Abstract Exercise below
         Measurable myShape = new Rectangle(6, 5);
-        System.out.println("Rectangle Prem: " +myShape.getPerimeter());
+        System.out.println("Rectangle Prem: " + myShape.getPerimeter());
         System.out.println("Rectangle Area:  " + myShape.getArea());
 
         Measurable square =  new Square(6);
-        System.out.println("Square prem: "+ square.getPerimeter());
+        System.out.println("Square prem: " + square.getPerimeter());
         System.out.println("Square prem: " + square.getArea());
 
         //once we override the getlength in Measurable it gets the length
         System.out.println(myShape.getlength());
+        //It does not read the getLength directly, becasue we access type measurable here
+
+        //Or we can explicitly cast it to
+        Rectangle r = (Rectangle) myShape;
 
     }
 }
